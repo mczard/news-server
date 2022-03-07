@@ -10,14 +10,7 @@ export class NewsManager {
         this.basePath = basePath;
 
         if (!fs.existsSync(basePath)) {
-            fs.mkdirSync(path.resolve(__dirname, basePath), { recursive: true }, e => {
-                if (e) {
-                    console.log(`Nie udało się utworzyć ściezki ${path.resolve(__dirname, basePath)}`)
-                    throw e;
-                } else {
-                    console.log(`Utworzono ścieżkę ${path.resolve(__dirname, basePath)}`);
-                }
-             });
+            fs.mkdirSync(path.resolve(__dirname, basePath), { recursive: true });
         }
     }
 
